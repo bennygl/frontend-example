@@ -12,15 +12,15 @@ describe('DateFormat', () => {
             expect(DateFormat.timestampToString(new Date('2019-01-01 15:30').getTime(), 'en-US')).toBe('1/1/2019');
         });
     });
-    describe('timestampToDate', () => {
+    describe('timestampToWeekDay', () => {
         it('de with default options', () => {
-            expect(DateFormat.timestampToDate(new Date('2019-01-01 15:30').getTime(), 'de')).toBe('01.01.');
+            expect(DateFormat.timestampToWeekDay(new Date('2019-01-01 15:30').getTime(), 'de')).toBe('Dienstag');
         });
         it('en-gb with default options', () => {
-            expect(DateFormat.timestampToDate(new Date('2019-01-01 15:30').getTime(), 'en-GB')).toBe('01/01');
+            expect(DateFormat.timestampToWeekDay(new Date('2019-01-01 15:30').getTime(), 'en-GB')).toBe('Tuesday');
         });
         it('en-us with default options', () => {
-            expect(DateFormat.timestampToDate(new Date('2019-01-01 15:30').getTime(), 'en-US')).toBe('1/1');
+            expect(DateFormat.timestampToWeekDay(new Date('2019-01-01 15:30').getTime(), 'en-US')).toBe('Tuesday');
         });
     });
     describe('timestampToTime', () => {

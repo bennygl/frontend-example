@@ -41,7 +41,9 @@ const MatchTime: React.FC<Props> = ({match}) => {
     if (match.begin < now) {
         return <Time>{`${DateFormat.milliSecondsToFullMinutes(now - match.begin)}${MINUTE_SYMBOL}`}</Time>;
     } else {
-        return <Time>{`${DateFormat.timestampToDate(match.begin)} ${DateFormat.timestampToTime(match.begin)}`}</Time>;
+        return (
+            <Time>{`${DateFormat.timestampToWeekDay(match.begin)} ${DateFormat.timestampToTime(match.begin)}`}</Time>
+        );
     }
 };
 
