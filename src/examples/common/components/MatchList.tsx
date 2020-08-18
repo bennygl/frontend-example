@@ -26,7 +26,7 @@ const MatchList: React.FC<Props> = ({matches, getMatches}) => {
     useEffect(() => {
         const reloadTimer = setInterval(() => getMatches(), RELOAD_INTERVAL);
         return () => clearInterval(reloadTimer);
-    });
+    }, []);
 
     return (
         <Container>
