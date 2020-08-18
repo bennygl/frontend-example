@@ -1,3 +1,9 @@
+// Interface for Country and League is somewhat superfluous, implemented as interfaces for easier future maintainability
+export interface Country {
+    id: string;
+    label: string;
+}
+
 export interface League {
     id: string;
     label: string;
@@ -11,7 +17,7 @@ export interface Team {
 export interface Match {
     id: string;
     begin: number;
-    country: 'Germany' | 'Spain'; // Could use a custom type if more information about country is necessary
+    country: Country;
     homeTeam: Team;
     awayTeam: Team;
     league: League;

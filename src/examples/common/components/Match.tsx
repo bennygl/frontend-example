@@ -51,8 +51,8 @@ const Match: React.FC<Props> = ({match}) => {
     return (
         <Container>
             <Row>
-                <Country>{match.country}</Country>
-                {match.league && <League>{match.league.label}</League>}
+                <Country>{match.country.label}</Country>
+                <League>{match.league.label}</League>
             </Row>
             <Row>
                 <MatchTime match={match} />
