@@ -6,6 +6,6 @@ export const Bundesliga: ProgramTypes.League = {
 };
 
 export const PrimeraDivision: ProgramTypes.League = {
-    id: 'm2',
+    id: 'l2',
     label: 'Primera Division'
 };
