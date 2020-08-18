@@ -38,7 +38,7 @@ describe('DateFormat', () => {
         it('de with default options', () => {
             const now = Date.now();
             const minutes = 30;
-            expect(DateFormat.milliSecondsToFullinutes(now + minutes * 60 * 1000 - now)).toBe(minutes);
+            expect(DateFormat.milliSecondsToFullMinutes(now + minutes * 60 * 1000 - now)).toBe(minutes);
         });
     });
 });

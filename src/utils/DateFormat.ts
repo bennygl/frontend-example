@@ -10,6 +10,6 @@ export function timestampToTime(timestamp: number, language?: string): string {
     return timestampToString(timestamp, language, {hour: 'numeric', minute: 'numeric'});
 }
 
-export function milliSecondsToFullinutes(milliseconds: number) {
+export function milliSecondsToFullMinutes(milliseconds: number) {
     return Math.ceil(milliseconds / 60 / 1000);
 }

@@ -32,7 +32,7 @@ const Score = styled.div``;
 const MatchTime: React.FC<Props> = ({match}) => {
     const now = Date.now();
     if (match.begin < now) {
-        return <Time>{`${DateFormat.milliSecondsToFullinutes(now - match.begin)}${MINUTE_SYMBOL}`}</Time>;
+        return <Time>{`${DateFormat.milliSecondsToFullMinutes(now - match.begin)}${MINUTE_SYMBOL}`}</Time>;
     } else {
         return <Time>{`${DateFormat.timestampToDate(match.begin)} ${DateFormat.timestampToTime(match.begin)}`}</Time>;
     }
