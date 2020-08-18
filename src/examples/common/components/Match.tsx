@@ -13,19 +13,20 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
+
+    min-width: 400px;
 `;
 
 const Row = styled.div`
     display: flex;
+    justify-content: space-between;
 `;
 
 const Time = styled.div`
     margin-right: 10px;
 `;
 
-const Team = styled.div`
-    margin-right: 10px;
-`;
+const Team = styled.div``;
 
 const Score = styled.div``;
 
@@ -41,6 +42,10 @@ const MatchTime: React.FC<Props> = ({match}) => {
 const Match: React.FC<Props> = ({match}) => {
     return (
         <Container>
+            <Row>
+                <h3>{match.country}</h3>
+                <h4>{match.league && match.league.label}</h4>
+            </Row>
             <Row>
                 <MatchTime match={match} />
                 {match.score && <Score>{match.score.join(':')}</Score>}
