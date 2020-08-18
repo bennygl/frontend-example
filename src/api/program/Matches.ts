@@ -7,7 +7,7 @@ const OFFSET = 30 * 60 * 1000;
 export const DortmundVSBayern: ProgramTypes.Match = {
     id: 'm1',
     begin: Date.now() - OFFSET,
-    hostCountry: 'Germany',
+    country: 'Germany',
     homeTeam: Teams.Dortmund,
     awayTeam: Teams.Bayern,
     league: Leagues.Bundesliga,
@@ -17,7 +17,7 @@ export const DortmundVSBayern: ProgramTypes.Match = {
 export const MadridVSBarcelona: ProgramTypes.Match = {
     id: 'm2',
     begin: Date.now() + OFFSET,
-    hostCountry: 'Spain',
+    country: 'Spain',
     homeTeam: Teams.Madrid,
     awayTeam: Teams.Barcelona,
     league: Leagues.PrimeraDivision
